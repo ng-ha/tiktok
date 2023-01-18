@@ -11,7 +11,6 @@ import {
     faCircleQuestion,
     faKeyboard,
     faInbox,
-    faCloudArrowUp,
     faGear,
     faUser,
     faRightFromBracket,
@@ -29,6 +28,8 @@ import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
 import avatar from '~/assets/images/avatar.jpg';
 import { faTiktok } from '@fortawesome/free-brands-svg-icons';
+import { UploadIcon } from '~/components/Icons';
+import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
 
@@ -151,9 +152,9 @@ function Header() {
                 <div className={cx('actions')}>
                     {currentUser ? (
                         <>
-                            <Tippy content="Upload video" placement="bottom">
+                            <Tippy offset={[0, 4.5]} content="Upload video" placement="bottom">
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faCloudArrowUp} />
+                                    <UploadIcon width="34px" height="34px" />
                                 </button>
                             </Tippy>
                             <Tippy content="Messages" placement="bottom">
@@ -178,7 +179,7 @@ function Header() {
                     )}
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img src={avatar} className={cx('user-avatar')} alt="avatar" />
+                            <Image src={avatar} className={cx('user-avatar')} alt="avatar" />
                         ) : (
                             <button className={cx('more-btn')}>
                                 <FontAwesomeIcon icon={faEllipsisVertical} />
