@@ -45,7 +45,107 @@ const MENU_ITEMS = [
                 {
                     type: 'language',
                     code: 'vi',
-                    title: 'Tiếng Việt',
+                    title: 'Vietnamese',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Chinese',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Spanish',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Arabic',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'French',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Persian',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'German',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Russian',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Malay',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Portuguese',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Italian',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Turkish',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Lahnda',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Tamil',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Urdu',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Korean',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Hindi',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Bengali',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Japanese',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Telugu',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Marathi',
                 },
             ],
         },
