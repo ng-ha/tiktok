@@ -3,7 +3,7 @@ import classNames from 'classnames/bind';
 import styles from './Search.module.scss';
 import { useEffect, useState, useRef } from 'react';
 
-import * as searchServices from '~/apiServices/searchServices';
+import * as searchService from '~/services/searchService';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import HeadlessTippy from '@tippyjs/react/headless';
 import AccountItem from '~/components/AccountItem';
@@ -89,10 +89,10 @@ function Search() {
         // };
         // fetchApi();
 
-        // dùng axios + async/await + custom các apiServices
+        // dùng axios + async/await + custom các apiService
         const fetchApi = async () => {
             try {
-                const res = await searchServices.search(debounced);
+                const res = await searchService.search(debounced);
                 setSearchResult(res);
                 setLoading(false);
             } catch (error) {
