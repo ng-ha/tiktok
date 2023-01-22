@@ -45,7 +45,7 @@ function Menu({ children, items = [], hideOnClick = false, onChange = () => {} }
             </PopperWrapper>
         </div>
     );
-    const handleResetMenu = () => setHistory((prev) => prev.slice(0, 1));
+    const handleReset = () => setHistory((prev) => prev.slice(0, 1));
 
     return (
         <Tippy
@@ -55,7 +55,7 @@ function Menu({ children, items = [], hideOnClick = false, onChange = () => {} }
             delay={[0, 700]}
             hideOnClick={hideOnClick}
             render={renderResult}
-            onHide={handleResetMenu}
+            onHide={handleReset}
         >
             {children}
         </Tippy>
