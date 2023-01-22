@@ -15,21 +15,21 @@ const cx = classNames.bind(styles);
 function Search() {
     const [searchValue, setSearchValue] = useState('');
     const [searchResult, setSearchResult] = useState([]);
-    const [showResult, setShowResult] = useState(true);
+    const [showResult, setShowResult] = useState(false);
     const [loading, setLoading] = useState(false);
 
     const inputRef = useRef();
 
-    const debounced = useDebounce(searchValue, 500);
+    const debouncedValue = useDebounce(searchValue, 500);
     useEffect(() => {
-        if (!debounced.trim()) {
+        if (!debouncedValue.trim()) {
             setSearchResult([]);
             return;
         }
         setLoading(true);
 
         // dùng fetch:
-        // fetch(`https://tiktok.fullstack.edu.vn/api/users/search?q=${encodeURIComponent(debounced)}&type=less`)
+        // fetch(`https://tiktok.fullstack.edu.vn/api/users/search?q=${encodeURIComponent(debouncedValue)}&type=less`)
         //     .then((response) => response.json())
         //     .then((data) => {
         //         setSearchResult(data.data);
@@ -44,7 +44,7 @@ function Search() {
         //  someInstance
         //     .get('users/search', {
         //         params: {
-        //             q: debounced,
+        //             q: debouncedValue,
         //             type: 'less',
         //         },
         //     })
@@ -60,7 +60,7 @@ function Search() {
         // request
         //     .get('users/search', {
         //         params: {
-        //             q: debounced,
+        //             q: debouncedValue,
         //             type: 'less',
         //         },
         //     })
@@ -77,7 +77,7 @@ function Search() {
         //     try {
         //         const res = await request.get('users/search', {
         //             params: {
-        //                 q: debounced,
+        //                 q: debouncedValue,
         //                 type: 'less',
         //             },
         //         });
@@ -92,7 +92,7 @@ function Search() {
         // dùng axios + async/await + custom các apiService
         const fetchApi = async () => {
             try {
-                const res = await searchService.search(debounced);
+                const res = await searchService.search(debouncedValue);
                 setSearchResult(res);
                 setLoading(false);
             } catch (error) {
@@ -100,7 +100,7 @@ function Search() {
             }
         };
         fetchApi();
-    }, [debounced]);
+    }, [debouncedValue]);
 
     const handleClear = () => {
         setSearchValue('');
