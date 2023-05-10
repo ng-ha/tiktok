@@ -1,11 +1,11 @@
 import * as httpRequest from '~/utils/httpRequest';
 
-export const search = async (q, type = 'less') => {
+export const getSuggested = async (page = 1, perPage = 5) => {
     try {
-        const res = await httpRequest.get('users/search', {
+        const res = await httpRequest.get('users/suggested', {
             params: {
-                q,
-                type,
+                page,
+                per_page: perPage,
             },
         });
         return res.data;
@@ -13,5 +13,3 @@ export const search = async (q, type = 'less') => {
         console.log(error);
     }
 };
-
-// file để tạo sẵn method search

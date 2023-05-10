@@ -6,14 +6,14 @@ import styles from './SuggestedAccounts.module.scss';
 import Tippy from '@tippyjs/react/headless';
 import { Wrapper as PopperWrapper } from '../Popper';
 import AccountPreview from './AccountPreview';
-
+import Image from '~/components/Image';
 const cx = classNames.bind(styles);
 
-function AccountItem() {
+function AccountItem({ data }) {
     const renderPreview = (attrs) => (
         <div tabIndex={-1} {...attrs}>
             <PopperWrapper>
-                <AccountPreview />
+                <AccountPreview data={data} />
             </PopperWrapper>
         </div>
     );
@@ -22,23 +22,21 @@ function AccountItem() {
         <div>
             <Tippy offset={[-15, 0]} interactive delay={[500, 0]} placement="bottom" render={renderPreview}>
                 <div className={cx('account-item')}>
-                    <img
-                        className={cx('avatar')}
-                        src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/cc105db1a5ae3080014a9122820093b7~c5_100x100.jpeg?x-expires=1674579600&x-signature=VueWNLmoEYELJG4pdWpkGz8bBwA%3D"
-                        alt="avatar"
-                    />
+                    <Image className={cx('avatar')} src={data.avatar} alt={data.nickname} />
                     <div className={cx('item-info')}>
                         <p className={cx('user-name')}>
-                            <strong>schizo</strong>
-                            <FontAwesomeIcon className={cx('check')} icon={faCheckCircle} />
+                            <strong>{data.nickname}</strong>
+                            {data.tick && <FontAwesomeIcon className={cx('check')} icon={faCheckCircle} />}
                         </p>
-                        <p className={cx('full-name')}>schizophrene</p>
+                        <p className={cx('full-name')}>{`${data.first_name} ${data.last_name}`}</p>
                     </div>
                 </div>
             </Tippy>
         </div>
     );
 }
-AccountItem.propTypes = {};
+AccountItem.propTypes = {
+    data: PropTypes.object.isRequired,
+};
 
 export default AccountItem;
