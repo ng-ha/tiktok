@@ -1,5 +1,7 @@
 # Tiktok clone using ReactJs + Scss :seedling:
 
+![tiktokui](./github-images/tiktok.png)
+
 ### Link Demo 📌
 
 [https://tiktokui.vercel.app/](https://tiktokui.vercel.app/)
