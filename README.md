@@ -6,9 +6,10 @@
 
 ### Technologies ✨
 
--   ReactJs
--   Scss
--   RESTful API with axios
+-   `ReactJs`
+-   `Scss`
+-   RESTful API with `axios`
+-   `ThreeJs` + `react-three/fiber` + `react-three/drei`
 
 ### License :right_anger_bubble:
 
