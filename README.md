@@ -1,4 +1,4 @@
-## A small reactjs web-based platform that replicates Tiktok Interfaces with some additional 3D models 🌱
+## A small reactjs app that replicates Tiktok Interfaces with some additional 3D models 🌱
 
 ![tiktokui](./github-images/tiktok.png)
 
