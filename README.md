@@ -1,4 +1,4 @@
-# Tiktok clone using ReactJs + Scss :seedling:
+# Tiktok clone using `ReactJs` + `Scss` :seedling:
 
 ![tiktokui](./github-images/tiktok.png)
 
