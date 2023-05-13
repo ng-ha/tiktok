@@ -1,6 +1,7 @@
-# Tiktok clone using `ReactJs` + `Scss` :seedling:
+# A small reactjs web-based platform that replicates Tiktok Interfaces with some additional 3D models 🌱
 
 ![tiktokui](./github-images/tiktok.png)
+
 
 ### Link Demo 📌
 
